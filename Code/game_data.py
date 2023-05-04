@@ -38,7 +38,7 @@ level_4 = {
         'cherep': '../levels/4/level_4_cherep.csv',
         'node_pos': (480, 610),
         'node_graphics': '../graphics/overworld/4',
-        'unlock': 3}
+        'unlock': 2}
 
 levels = {
         0: level_2,
