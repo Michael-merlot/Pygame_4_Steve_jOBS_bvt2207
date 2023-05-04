@@ -7,13 +7,13 @@ class UI:
         self.display_surface = surface
 
         # Здоровье
-        self.health_bar = pygame.image.load('../graphics/ui/health_bar.png')
+        self.health_bar = pygame.image.load('../graphics/ui/health_bar.png').convert_alpha()
         self.health_bar_topleft = (54, 39)
         self.bar_max_width = 152
         self.bar_height = 4
 
         # Монеты
-        self.coin = pygame.image.load('../graphics/ui/coin.png')
+        self.coin = pygame.image.load('../graphics/ui/coin.png').convert_alpha()
         self.coin_rect = self.coin.get_rect(topleft = (50, 61))
         self.font = pygame.font.Font('../graphics/ui/ARCADEPI.TTF', 30)
 
