@@ -10,7 +10,7 @@ from game_data import levels
 
 
 class Level:
-    def __init__(self, current_level, surface, create_overworld):
+    def __init__(self, current_level, surface, create_overworld, change_coins):
 
         # Основная настройка
         self.display_surface = surface
@@ -29,6 +29,10 @@ class Level:
         self.player = pygame.sprite.GroupSingle()
         self.goal = pygame.sprite.GroupSingle()
         self.player_setup(player_layout)
+
+        # Пользовательский интерфейс
+        self.change_coins = change_coins
+
 
         # Пыль
         self.dust_sprite = pygame.sprite.GroupSingle()
@@ -89,8 +93,8 @@ class Level:
                         sprite = Crate(tile_size,x , y)
 
                     if type == 'coins':
-                        if val == '0': sprite = Coin(tile_size, x, y, '../graphics/coins/gold')
-                        if val == '1': sprite = Coin(tile_size, x, y, '../graphics/coins/silver')
+                        if val == '0': sprite = Coin(tile_size, x, y, '../graphics/coins/gold', 5)
+                        if val == '1': sprite = Coin(tile_size, x, y, '../graphics/coins/silver', 1)
 
                     if type == 'fak':
                         sprite = Fakel(tile_size, x, y, '../graphics/decoration/fak', 5)
@@ -210,6 +214,12 @@ class Level:
         if pygame.sprite.spritecollide(self.player.sprite, self.goal, False):
             self.create_overworld(self.current_level, self.new_max_level)
 
+    def check_coin_collisions(self):
+        collided_coins = pygame.sprite.spritecollide(self.player.sprite, self.coin_sprites, True)
+        if collided_coins:
+            for coin in collided_coins:
+                self.change_coins(coin.value)
+
     def run(self):
         # Пробег игры и уровня
 
@@ -261,6 +271,8 @@ class Level:
 
         self.check_death()
         self.check_win()
+
+        self.check_coin_collisions()
 
         # Облака
         self.cloud.draw(self.display_surface, self.world_shift)
