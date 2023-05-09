@@ -9,7 +9,7 @@ class Game:
     def __init__(self):
 
         # Игровые атрибуты
-        self.max_level = 0
+        self.max_level = 3
         self.max_health = 100
         self.current_health = 100
         self.coins = 0
@@ -19,7 +19,7 @@ class Game:
         self.overworld_bg_music = pygame.mixer.Sound('../audio/overworld_music.mp3')
 
         # Создание мира
-        self.overworld = Overworld(0, self.max_level, screen, self.create_level)
+        self.overworld = Overworld(3, self.max_level, screen, self.create_level)
         self.status = 'overworld'
         self.overworld_bg_music.play(loops= -1)
 

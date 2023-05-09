@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="60" height="11" tilewidth="64" tileheight="64" infinite="0" nextlayerid="14" nextobjectid="1">
  <editorsettings>
-  <export target="../3/level_3.csv" format="csv"/>
+  <export target="../../../PycharmProjects/testwww/levels/3/level_3.csv" format="csv"/>
  </editorsettings>
- <tileset firstgid="1" source="../../../../Desktop/Игра для проекта/Level/block1.tsx"/>
- <tileset firstgid="2" source="../../../../Desktop/Игра для проекта/Level/block4.tsx"/>
- <tileset firstgid="3" source="../../../../Desktop/Игра для проекта/Level/block5.tsx"/>
- <tileset firstgid="4" source="../../../../Desktop/Игра для проекта/Level/block6.tsx"/>
- <tileset firstgid="5" source="../../../../Desktop/Игра для проекта/Level/block3.tsx"/>
- <tileset firstgid="6" source="../../../../Desktop/Игра для проекта/Level/block7.tsx"/>
- <tileset firstgid="7" source="../../../../Desktop/Игра для проекта/Level/block9.tsx"/>
- <tileset firstgid="8" source="../../../../Desktop/Игра для проекта/Level/rat0.tsx"/>
- <tileset firstgid="9" source="../../../../Desktop/Игра для проекта/Level/вуамя.tsx"/>
- <tileset firstgid="10" source="../../../../Desktop/Игра для проекта/Level/OriginalLevel1.tsx"/>
- <tileset firstgid="11" source="../../../../Desktop/Игра для проекта/Level/block03.tsx"/>
- <tileset firstgid="12" source="../../../../Desktop/Игра для проекта/Level/block02.tsx"/>
- <tileset firstgid="13" source="../../../../Desktop/Игра для проекта/Level/coin_tiles.tsx"/>
- <tileset firstgid="15" source="../../../../Desktop/Игра для проекта/Level/block2.tsx"/>
- <tileset firstgid="16" source="../../../../Desktop/Игра для проекта/Level/torch.tsx"/>
- <tileset firstgid="20" source="../../../../Desktop/Игра для проекта/Level/torch_light1.tsx"/>
- <tileset firstgid="21" source="../../../../Desktop/Игра для проекта/Level/torch_light2.tsx"/>
- <tileset firstgid="22" source="../../../../Desktop/Игра для проекта/Level/torch_light3.tsx"/>
- <tileset firstgid="23" source="../../../../Desktop/Игра для проекта/Level/torch_light4.tsx"/>
- <tileset firstgid="24" source="../../../../Desktop/Игра для проекта/Level/torch_light5.tsx"/>
- <tileset firstgid="25" source="../../../../Desktop/Игра для проекта/Level/torch_light6.tsx"/>
- <tileset firstgid="26" source="../../../../Desktop/Игра для проекта/Level/torch_light7.tsx"/>
- <tileset firstgid="27" source="../../../../Desktop/Игра для проекта/Level/torch_light8.tsx"/>
- <tileset firstgid="28" source="../../../../Desktop/Игра для проекта/Level/torch_light9.tsx"/>
- <tileset firstgid="29" source="../../../../Desktop/Игра для проекта/Level/skull2.tsx"/>
- <tileset firstgid="30" source="../../../../Desktop/Игра для проекта/Level/skull1.tsx"/>
- <tileset firstgid="31" source="../../../../Desktop/Игра для проекта/Level/bone.tsx"/>
- <tileset firstgid="32" source="../../../../Desktop/Игра для проекта/Level/end.tsx"/>
- <tileset firstgid="33" source="../../../../Desktop/Игра для проекта/Level/start.tsx"/>
- <tileset firstgid="34" source="../../../../Desktop/Игра для проекта/Level/barrel.tsx"/>
- <tileset firstgid="35" source="../../../../Desktop/Игра для проекта/Level/buba.tsx"/>
- <tileset firstgid="51" source="../../../../Desktop/level_4/set fakel.tsx"/>
- <tileset firstgid="60" source="../../../../Desktop/Игра для проекта/Level/torch1.tsx"/>
- <tileset firstgid="69" source="../../../../Desktop/Игра для проекта/barrel.tsx"/>
- <tileset firstgid="70" source="../../../../Desktop/level_3/setup_tiles.tsx"/>
+ <tileset firstgid="1" source="../../Игра для проекта/Level/block1.tsx"/>
+ <tileset firstgid="2" source="../../Игра для проекта/Level/block4.tsx"/>
+ <tileset firstgid="3" source="../../Игра для проекта/Level/block5.tsx"/>
+ <tileset firstgid="4" source="../../Игра для проекта/Level/block6.tsx"/>
+ <tileset firstgid="5" source="../../Игра для проекта/Level/block3.tsx"/>
+ <tileset firstgid="6" source="../../Игра для проекта/Level/block7.tsx"/>
+ <tileset firstgid="7" source="../../Игра для проекта/Level/block9.tsx"/>
+ <tileset firstgid="8" source="../../Игра для проекта/Level/rat0.tsx"/>
+ <tileset firstgid="9" source="../../Игра для проекта/Level/вуамя.tsx"/>
+ <tileset firstgid="10" source="../../Игра для проекта/Level/OriginalLevel1.tsx"/>
+ <tileset firstgid="11" source="../../Игра для проекта/Level/block03.tsx"/>
+ <tileset firstgid="12" source="../../Игра для проекта/Level/block02.tsx"/>
+ <tileset firstgid="13" source="../../Игра для проекта/Level/coin_tiles.tsx"/>
+ <tileset firstgid="15" source="../../Игра для проекта/Level/block2.tsx"/>
+ <tileset firstgid="16" source="../../Игра для проекта/Level/torch.tsx"/>
+ <tileset firstgid="20" source="../../Игра для проекта/Level/torch_light1.tsx"/>
+ <tileset firstgid="21" source="../../Игра для проекта/Level/torch_light2.tsx"/>
+ <tileset firstgid="22" source="../../Игра для проекта/Level/torch_light3.tsx"/>
+ <tileset firstgid="23" source="../../Игра для проекта/Level/torch_light4.tsx"/>
+ <tileset firstgid="24" source="../../Игра для проекта/Level/torch_light5.tsx"/>
+ <tileset firstgid="25" source="../../Игра для проекта/Level/torch_light6.tsx"/>
+ <tileset firstgid="26" source="../../Игра для проекта/Level/torch_light7.tsx"/>
+ <tileset firstgid="27" source="../../Игра для проекта/Level/torch_light8.tsx"/>
+ <tileset firstgid="28" source="../../Игра для проекта/Level/torch_light9.tsx"/>
+ <tileset firstgid="29" source="../../Игра для проекта/Level/skull2.tsx"/>
+ <tileset firstgid="30" source="../../Игра для проекта/Level/skull1.tsx"/>
+ <tileset firstgid="31" source="../../Игра для проекта/Level/bone.tsx"/>
+ <tileset firstgid="32" source="../../Игра для проекта/Level/end.tsx"/>
+ <tileset firstgid="33" source="../../Игра для проекта/Level/start.tsx"/>
+ <tileset firstgid="34" source="../../Игра для проекта/Level/barrel.tsx"/>
+ <tileset firstgid="35" source="../../Игра для проекта/Level/buba.tsx"/>
+ <tileset firstgid="51" source="../../level_4/set fakel.tsx"/>
+ <tileset firstgid="60" source="../../Игра для проекта/Level/torch1.tsx"/>
+ <tileset firstgid="69" source="../../Игра для проекта/barrel.tsx"/>
+ <tileset firstgid="70" source="../../level_3/setup_tiles.tsx"/>
+ <tileset firstgid="72" source="../../Игра для проекта/all.tsx"/>
+ <tileset firstgid="76" source="../../setup_tiles.tsx"/>
  <layer id="6" name="terrain" width="60" height="11">
   <data encoding="csv">
 40,40,40,40,40,37,0,0,0,0,0,0,0,0,0,0,0,0,35,36,37,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,40,0,0,0,0,40,0,0,39,0,0,39,40,40,40,40,40,40,40,40,40,40,40,40,
@@ -115,15 +117,15 @@
  </layer>
  <layer id="1" name="cherep" width="60" height="11">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,73,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,74,0,0,0,0,0,0,0,73,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
@@ -165,8 +167,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,0,
-69,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,77,
+69,70,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

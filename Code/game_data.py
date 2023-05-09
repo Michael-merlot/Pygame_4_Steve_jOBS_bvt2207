@@ -38,9 +38,24 @@ level_4 = {
         'cherep': '../levels/4/level_4_cherep.csv',
         'node_pos': (480, 610),
         'node_graphics': '../graphics/overworld/4',
-        'unlock': 2}
+        'unlock': 3}
+
+level_5 = {
+        'terrain': '../levels/5/level_5_terrain.csv',
+        'coins': '../levels/5/level_5_coins.csv',
+        'player': '../levels/5/level_5_player.csv',
+        'barrel': '../levels/5/level_5_barrel.csv',
+        'set fak': '../levels/5/level_5_set fak.csv',
+        'fak': '../levels/5/level_5_fak.csv',
+        'enemies': '../levels/5/level_5_enemies.csv',
+        'constrations': '../levels/5/level_5_constrations.csv',
+        'cherep': '../levels/5/level_5_cherep.csv',
+        'node_pos': (610, 350),
+        'node_graphics': '../graphics/overworld/5',
+        'unlock': 3}
 
 levels = {
         0: level_2,
         1: level_3,
-        2: level_4}
+        2: level_4,
+        3: level_5}
