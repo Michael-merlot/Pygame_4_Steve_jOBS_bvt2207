@@ -19,7 +19,7 @@ class Game:
         self.overworld_bg_music = pygame.mixer.Sound('../audio/overworld_music.mp3')
 
         # Создание мира
-        self.overworld = Overworld(3, self.max_level, screen, self.create_level)
+        self.overworld = Overworld(0, self.max_level, screen, self.create_level)
         self.status = 'overworld'
         self.overworld_bg_music.play(loops= -1)
 
