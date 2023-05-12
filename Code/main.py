@@ -9,7 +9,7 @@ class Game:
     def __init__(self):
 
         # Игровые атрибуты
-        self.max_level = 3
+        self.max_level = 0
         self.max_health = 100
         self.current_health = 100
         self.coins = 0

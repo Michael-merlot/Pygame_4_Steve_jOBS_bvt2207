@@ -2,7 +2,6 @@ import pygame
 from support import import_folder
 
 
-
 class Tile(pygame.sprite.Sprite):
 
     def __init__(self, size, x, y):
@@ -12,8 +11,6 @@ class Tile(pygame.sprite.Sprite):
 
     def update(self, shift):
         self.rect.x += shift
-
-
 
 class StaticTile(Tile):
 
@@ -26,7 +23,6 @@ class Crate(StaticTile):
         super().__init__(size, x, y, pygame.image.load('../graphics/decoration/barrel.png').convert_alpha())
         offset_y = y + size
         self.rect = self.image.get_rect(bottomleft = (x, offset_y))
-
 
 class AnimatedTile(Tile):
     def __init__(self, size, x, y, path):
