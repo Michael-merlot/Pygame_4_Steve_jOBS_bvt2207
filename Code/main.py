@@ -19,6 +19,7 @@ class Game:
         # Музыка
         self.level_bg_music = pygame.mixer.Sound('../audio/level_music.mp3')
         self.overworld_bg_music = pygame.mixer.Sound('../audio/overworld_music.mp3')
+        self.menu_bg_music = pygame.mixer.Sound('../audio/menu_music.mp3')
 
         self.game_menu = Gamemenu(0, self.screen, self)
 
@@ -94,11 +95,40 @@ while True:
             pygame.quit()
             sys.exit()
 
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                if game.status != 'menu':
+                    game.status = 'menu'
+                    game.level_bg_music.stop()
+                    game.overworld_bg_music.stop()
+                    if not pygame.mixer.get_busy():
+                        game.menu_bg_music.play()
+
         if game.status == 'menu':
             game.game_menu.handle_event(event)
+
+    if game.status == 'menu':
+        # Остановите другую музыку и воспроизведите музыку меню
+        game.level_bg_music.stop()
+        game.overworld_bg_music.stop()
+        if not pygame.mixer.get_busy():
+            game.menu_bg_music.play()
+    elif game.status == 'overworld':
+        # Остановите другую музыку и воспроизведите музыку overworld
+        game.menu_bg_music.stop()
+        game.level_bg_music.stop()
+        if not pygame.mixer.get_busy():
+            game.overworld_bg_music.play()
+    elif game.status == 'level':
+        # Остановите другую музыку и воспроизведите музыку уровня
+        game.menu_bg_music.stop()
+        game.overworld_bg_music.stop()
+        if not pygame.mixer.get_busy():
+            game.level_bg_music.play()
 
     screen.fill('grey')
     game.run()
 
     pygame.display.update()
     clock.tick(60)
+

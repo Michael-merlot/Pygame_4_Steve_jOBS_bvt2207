@@ -63,12 +63,16 @@ class Options:
         # Увеличиваем громкость на 10%
         self.volume_level = min(1.0, self.volume_level + 0.1)
         self.game.level_bg_music.set_volume(self.volume_level)
+        self.game.overworld_bg_music.set_volume(self.volume_level)
+        self.game.menu_bg_music.set_volume(self.volume_level)  # Добавьте эту строку
         print(f"Volume up, new volume level is: {self.volume_level}")
 
     def volume_down(self):
         # Уменьшаем громкость на 10%
         self.volume_level = max(0.0, self.volume_level - 0.1)
         self.game.level_bg_music.set_volume(self.volume_level)
+        self.game.overworld_bg_music.set_volume(self.volume_level)
+        self.game.menu_bg_music.set_volume(self.volume_level)  # Добавьте эту строку
         print(f"Volume down, new volume level is: {self.volume_level}")
 
     def check_events(self):
