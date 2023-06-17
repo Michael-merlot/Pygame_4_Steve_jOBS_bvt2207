@@ -37,9 +37,9 @@ class Options:
         self.volume_level = self.game.level_bg_music.get_volume()
 
         #Загрузка изображения кнопки увеличения громкости
-        self.volume_up_image = pygame.image.load('../graphics/image_menu/Up.png')
+        self.volume_down_image = pygame.image.load('../graphics/image_menu/Right.png')
         #Загрузка изображения кнопки уменьшения громкости
-        self.volume_down_image = pygame.image.load('../graphics/image_menu/Down.png')
+        self.volume_up_image = pygame.image.load('../graphics/image_menu/Left.png')
 
         # Определение кнопок
         self.back_image = pygame.image.load('../graphics/image_menu/Back.png')
@@ -47,15 +47,15 @@ class Options:
         self.windowed_image = pygame.image.load('../graphics/image_menu/Play.png')
 
         self.options_buttons = [
-            {"image": self.fullscreen_image, "pos": (screen_width // 2 -  150, screen_height // 2 - 75),
+            {"image": self.fullscreen_image, "pos": (screen_width // 2 - 200, screen_height // 2 - 75),
              "call": self.fullscreen_mode},
-            {"image": self.windowed_image, "pos": (screen_width // 2 + 150, screen_height // 2 - 75),
+            {"image": self.windowed_image, "pos": (screen_width // 2 + 200, screen_height // 2 - 75),
              "call": self.windowed_mode},
-            {"image": self.volume_up_image, "pos": (screen_width // 2 - 150, screen_height // 2),
+            {"image": self.volume_up_image, "pos": (screen_width // 2 - 200, screen_height // 2),
              "call": self.volume_up},
-            {"image": self.volume_down_image, "pos": (screen_width // 2 + 150, screen_height // 2),
+            {"image": self.volume_down_image, "pos": (screen_width // 2 + 200, screen_height // 2),
              "call": self.volume_down},
-            {"image": self.back_image, "pos": (screen_width // 2, screen_height // 2 + 75),
+            {"image": self.back_image, "pos": (screen_width // 2, screen_height // 2 + 150),
              "call": self.go_back}
         ]
 
