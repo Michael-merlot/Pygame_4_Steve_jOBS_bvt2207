@@ -5,6 +5,7 @@ from overworld import Overworld
 from ui import UI
 from Gamemenu import Gamemenu
 from Options import Options
+from tutorial import Tutorial
 
 class Game:
     def __init__(self, screen):
@@ -22,6 +23,7 @@ class Game:
         self.menu_bg_music = pygame.mixer.Sound('../audio/menu_music.mp3')
 
         self.game_menu = Gamemenu(0, self.screen, self)
+        self.tutorial_shown = False
 
         # Установка начальной громкости
         self.volume_level = 1.0
@@ -46,6 +48,9 @@ class Game:
         self.status = 'level'
         self.overworld_bg_music.stop()
         self.level_bg_music.play(loops=-1)
+
+        if not self.tutorial_shown:
+            self.tutorial = Tutorial(self.screen)
 
     def create_overworld(self, current_level, new_max_level):
         if new_max_level > self.max_level:
@@ -81,6 +86,9 @@ class Game:
             self.ui.show_health(self.current_health, self.max_health)
             self.ui.show_coins(self.coins)
             self.check_game_over()
+
+            if not self.tutorial_shown:
+                self.tutorial.run()
 
 
 # Pygame setup
@@ -119,7 +127,7 @@ while True:
         game.level_bg_music.stop()
         if not pygame.mixer.get_busy():
             game.overworld_bg_music.play()
-    elif game.status == 'level':
+    elif game.status == 'level' and not game.tutorial_shown:
         # Остановите другую музыку и воспроизведите музыку уровня
         game.menu_bg_music.stop()
         game.overworld_bg_music.stop()
