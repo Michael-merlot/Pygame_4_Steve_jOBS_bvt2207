@@ -4,12 +4,14 @@ from level import Level
 from overworld import Overworld
 from ui import UI
 from Gamemenu import Gamemenu
+from Options import Options
 
 class Game:
-    def __init__(self):
+    def __init__(self, screen):
+        self.screen = screen
 
         # Игровые атрибуты
-        self.max_level = 4
+        self.max_level = 0
         self.max_health = 100
         self.current_health = 100
         self.coins = 0
@@ -18,11 +20,13 @@ class Game:
         self.level_bg_music = pygame.mixer.Sound('../audio/level_music.mp3')
         self.overworld_bg_music = pygame.mixer.Sound('../audio/overworld_music.mp3')
 
+        self.game_menu = Gamemenu(0, self.screen, self)
+
         # Установка начальной громкости
         self.volume_level = 1.0
         self.level_bg_music.set_volume(self.volume_level)
         self.overworld_bg_music.set_volume(self.volume_level)
-
+        self.options = Options(self.screen, self.game_menu, self)
 
         # Создание мира
         self.overworld = Overworld(0, self.max_level, screen, self.create_level)
@@ -40,14 +44,14 @@ class Game:
         self.level = Level(current_level, screen, self.create_overworld, self.change_coins, self.change_health)
         self.status = 'level'
         self.overworld_bg_music.stop()
-        self.level_bg_music.play(loops= -1)
+        self.level_bg_music.play(loops=-1)
 
     def create_overworld(self, current_level, new_max_level):
         if new_max_level > self.max_level:
             self.max_level = new_max_level
         self.overworld = Overworld(current_level, self.max_level, screen, self.create_level)
         self.status = 'overworld'
-        self.overworld_bg_music.play(loops= -1)
+        self.overworld_bg_music.play(loops=-1)
         self.level_bg_music.stop()
 
     def change_coins(self, amount):
@@ -77,11 +81,12 @@ class Game:
             self.ui.show_coins(self.coins)
             self.check_game_over()
 
+
 # Pygame setup
 pygame.init()
 screen = pygame.display.set_mode((screen_width, screen_height))
 clock = pygame.time.Clock()
-game = Game()
+game = Game(screen)
 
 while True:
     for event in pygame.event.get():
@@ -97,5 +102,3 @@ while True:
 
     pygame.display.update()
     clock.tick(60)
-
-

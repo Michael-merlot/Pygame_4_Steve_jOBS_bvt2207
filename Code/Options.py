@@ -29,11 +29,12 @@ def button_draw(screen, info):
     screen.blit(text, text_rect)
 
 class Options:
-    def __init__(self, display_surface, game_menu):
+    def __init__(self, display_surface, game_menu, game):
         self.display_surface = display_surface
         self.game_menu = game_menu
+        self.game = game
         self.menu_font = pygame.font.Font(None, 50)
-        self.volume_level = pygame.mixer.music.get_volume()
+        self.volume_level = self.game.level_bg_music.get_volume()
 
         #Загрузка изображения кнопки увеличения громкости
         self.volume_up_image = pygame.image.load('../graphics/image_menu/Up.png')
@@ -62,14 +63,12 @@ class Options:
         # Увеличиваем громкость на 10%
         self.volume_level = min(1.0, self.volume_level + 0.1)
         self.game.level_bg_music.set_volume(self.volume_level)
-        self.game.overworld_bg_music.set_volume(self.volume_level)
         print(f"Volume up, new volume level is: {self.volume_level}")
 
     def volume_down(self):
         # Уменьшаем громкость на 10%
         self.volume_level = max(0.0, self.volume_level - 0.1)
         self.game.level_bg_music.set_volume(self.volume_level)
-        self.game.overworld_bg_music.set_volume(self.volume_level)
         print(f"Volume down, new volume level is: {self.volume_level}")
 
     def check_events(self):

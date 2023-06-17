@@ -5,11 +5,12 @@ from Options import Options
 
 
 class Gamemenu:
-    def __init__(self, start_menu, surface, game):
-        self.display_surface = surface
-        self.current_menu = start_menu
+    def __init__(self, status, screen, game):
+        self.display_surface = screen
+        self.current_menu = status
         self.menu_font = pygame.font.Font(None, 50)
         self.game = game
+        self.options = Options(screen, self, game)
 
         self.background_image = pygame.image.load('../graphics/image_menu/1111.png')
         self.levels_image = pygame.image.load('../graphics/image_menu/Play.png')
@@ -33,7 +34,7 @@ class Gamemenu:
 
         self.buttons = self.main_menu_buttons
         self.selected_button = 0
-        self.options = Options(self.display_surface, self)
+        self.options = Options(self.display_surface, self, game)
 
     def go_to_settings(self):
         self.buttons = self.options.options_buttons
@@ -63,11 +64,11 @@ class Gamemenu:
     # Новый метод для обработки событий
     def handle_event(self, event):
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_w:
                 self.selected_button = max(0, self.selected_button - 1)
-            elif event.key == pygame.K_DOWN:
+            elif event.key == pygame.K_s:
                 self.selected_button = min(len(self.buttons) - 1, self.selected_button + 1)
-            elif event.key == pygame.K_RETURN:
+            elif event.key == pygame.K_SPACE:
                 self.buttons[self.selected_button]["call"]()
 
     def go_to_levels(self):
