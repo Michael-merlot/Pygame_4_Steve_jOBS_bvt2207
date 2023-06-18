@@ -2,7 +2,7 @@ import pygame
 class Tutorial:
     def __init__(self, screen):
         self.screen = screen
-        self.font = pygame.font.Font(None, 40)
+        self.font = pygame.font.Font('../font/Sans.ttf', 30)
         self.texts = [
             "Добро пожаловать в обучение!",
             "Используйте клавиши A, D для движения",
@@ -26,6 +26,12 @@ class Tutorial:
     def next(self):
         if self.current_text < len(self.texts) - 1:
             self.current_text += 1
+
+    def handle_event(self, event):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            self.page += 1
+            if self.page >= len(self.tutorial_pages):
+                self.done = True
 
     def run(self):
         if self.current_text < len(self.texts):

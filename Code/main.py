@@ -24,6 +24,7 @@ class Game:
 
         self.game_menu = Gamemenu(0, self.screen, self)
         self.tutorial_shown = False
+        self.tutorial = None
 
         # Установка начальной громкости
         self.volume_level = 1.0
@@ -51,6 +52,9 @@ class Game:
 
         if not self.tutorial_shown:
             self.tutorial = Tutorial(self.screen)
+            self.tutorial_shown = True
+        else:
+            self.tutorial = None
 
     def create_overworld(self, current_level, new_max_level):
         if new_max_level > self.max_level:
@@ -136,6 +140,10 @@ while True:
 
     screen.fill('grey')
     game.run()
+
+    if game.tutorial is not None:
+        game.tutorial.handle_event(event)
+        game.tutorial.draw()
 
     pygame.display.update()
     clock.tick(60)
