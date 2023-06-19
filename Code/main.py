@@ -118,6 +118,7 @@ while True:
 
         if game.status == 'menu':
             game.game_menu.handle_event(event)
+            game.tutorial = None
 
     if game.status == 'menu':
         # Остановите другую музыку и воспроизведите музыку меню
@@ -131,7 +132,8 @@ while True:
         game.level_bg_music.stop()
         if not pygame.mixer.get_busy():
             game.overworld_bg_music.play()
-    elif game.status == 'level' and not game.tutorial_shown:
+    elif game.status == 'level' and game.tutorial is not None:
+        game.tutorial.handle_event(event)
         # Остановите другую музыку и воспроизведите музыку уровня
         game.menu_bg_music.stop()
         game.overworld_bg_music.stop()
