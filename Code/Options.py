@@ -37,19 +37,19 @@ class Options:
         self.volume_level = self.game.level_bg_music.get_volume()
 
         #Загрузка изображения кнопки увеличения громкости
-        self.volume_down_image = pygame.image.load('../graphics/image_menu/Right.png')
+        self.volume_down_image = pygame.image.load('../graphics/image_menu/game.png')
         #Загрузка изображения кнопки уменьшения громкости
-        self.volume_up_image = pygame.image.load('../graphics/image_menu/Left.png')
+        self.volume_up_image = pygame.image.load('../graphics/image_menu/game.png')
 
         # Определение кнопок
-        self.back_image = pygame.image.load('../graphics/image_menu/Back.png')
-        self.fullscreen_image = pygame.image.load('../graphics/image_menu/Start.png')
-        self.windowed_image = pygame.image.load('../graphics/image_menu/Play.png')
+        self.back_image = pygame.image.load('../graphics/image_menu/game.png')
+        self.fullscreen_image = pygame.image.load('../graphics/image_menu/game.png')
+        self.windowed_image = pygame.image.load('../graphics/image_menu/game.png')
 
         self.options_buttons = [
-            {"image": self.fullscreen_image, "pos": (screen_width // 2 - 200, screen_height // 2 - 75),
+            {"image": self.fullscreen_image, "pos": (screen_width // 2 - 300, screen_height // 2 - 120),
              "call": self.fullscreen_mode},
-            {"image": self.windowed_image, "pos": (screen_width // 2 + 200, screen_height // 2 - 75),
+            {"image": self.windowed_image, "pos": (screen_width // 2 + 300, screen_height // 2 - 120),
              "call": self.windowed_mode},
             {"image": self.volume_up_image, "pos": (screen_width // 2 - 200, screen_height // 2),
              "call": self.volume_up},

@@ -13,7 +13,7 @@ class Game:
         self.screen = screen
 
         # Игровые атрибуты
-        self.max_level = 0
+        self.max_level = 4
         self.max_health = 100
         self.current_health = 100
         self.coins = 0
