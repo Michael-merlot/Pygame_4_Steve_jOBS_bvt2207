@@ -155,10 +155,12 @@ class Level:
                     player.collision_rect.left = sprite.rect.right
                     player.on_left = True
                     self.current_x = player.rect.left
+                    player.direction.x = 0
                 elif player.direction.x > 0:
                     player.collision_rect.right = sprite.rect.left
                     player.on_right = True
                     self.current_x = player.rect.right
+                    player.direction.x = 0
 
     def ver_movement_collision(self):
         player = self.player.sprite
@@ -299,6 +301,3 @@ class Level:
 
         # Облака
         self.cloud.draw(self.display_surface, self.world_shift)
-
-
-

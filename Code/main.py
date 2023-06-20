@@ -121,20 +121,20 @@ while True:
             game.tutorial = None
 
     if game.status == 'menu':
-        # Остановите другую музыку и воспроизведите музыку меню
+        # Остановить другую музыку и воспроизведите музыку меню
         game.level_bg_music.stop()
         game.overworld_bg_music.stop()
         if not pygame.mixer.get_busy():
             game.menu_bg_music.play()
     elif game.status == 'overworld':
-        # Остановите другую музыку и воспроизведите музыку overworld
+        # Остановить другую музыку и воспроизведите музыку overworld
         game.menu_bg_music.stop()
         game.level_bg_music.stop()
         if not pygame.mixer.get_busy():
             game.overworld_bg_music.play()
     elif game.status == 'level' and game.tutorial is not None:
         game.tutorial.handle_event(event)
-        # Остановите другую музыку и воспроизведите музыку уровня
+        # Остановить другую музыку и воспроизведите музыку уровня
         game.menu_bg_music.stop()
         game.overworld_bg_music.stop()
         if not pygame.mixer.get_busy():
@@ -149,4 +149,3 @@ while True:
 
     pygame.display.update()
     clock.tick(60)
-
