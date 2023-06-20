@@ -7,15 +7,22 @@ from player import Player
 from particles import ParticleEffect
 from decoration import Sky, Clouds
 from game_data import levels
-
+from game_data import level_dialogs
+import time
 
 class Level:
-    def __init__(self, current_level, surface, create_overworld, change_coins, change_health):
+    def __init__(self, current_level, level_dialogs, surface, create_overworld, change_coins, change_health):
 
         # Основная настройка
         self.display_surface = surface
         self.world_shift = 0
         self.current_x = None
+
+        # Субтитры
+        self.level_dialogs = level_dialogs.get(current_level, [])
+        self.current_dialog_index = 0
+        self.font = pygame.font.Font('../font/Sans.ttf', 24)
+        self.dialog_start_time = None
 
         # Музыка
         self.coin_sound = pygame.mixer.Sound('../audio/effects/coin.wav')
@@ -242,9 +249,26 @@ class Level:
                 else:
                     self.player.sprite.get_damage()
 
+    def display_dialog(self):
+        if self.dialog_start_time is None:
+            self.dialog_start_time = time.time()
+
+        elapsed_time = time.time() - self.dialog_start_time
+
+        if elapsed_time > 5:
+            self.dialog_start_time = time.time()
+            self.current_dialog_index += 1
+
+        if self.current_dialog_index < len(self.level_dialogs):
+            # Здесь код для отображения диалога на экране
+            text = self.font.render(self.level_dialogs[self.current_dialog_index], True, (255, 255, 255))
+            text_rect = text.get_rect()
+            text_rect.center = (self.display_surface.get_width() // 2, self.display_surface.get_height() * 0.8)
+
+            self.display_surface.blit(text, text_rect)
+
     def run(self):
         # Пробег игры и уровня
-
         # Декорация
         self.sky.draw(self.display_surface)
 
@@ -299,5 +323,6 @@ class Level:
         self.check_coin_collisions()
         self.check_enemy_collisions()
 
+        self.display_dialog()
         # Облака
         self.cloud.draw(self.display_surface, self.world_shift)

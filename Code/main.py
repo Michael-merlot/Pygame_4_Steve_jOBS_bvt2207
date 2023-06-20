@@ -6,6 +6,7 @@ from ui import UI
 from Gamemenu import Gamemenu
 from Options import Options
 from tutorial import Tutorial
+from game_data import level_dialogs
 
 class Game:
     def __init__(self, screen):
@@ -45,7 +46,7 @@ class Game:
         self.status = 'overworld'
 
     def create_level(self, current_level):
-        self.level = Level(current_level, screen, self.create_overworld, self.change_coins, self.change_health)
+        self.level = Level(current_level, level_dialogs, screen, self.create_overworld, self.change_coins, self.change_health)
         self.status = 'level'
         self.overworld_bg_music.stop()
         self.level_bg_music.play(loops=-1)
