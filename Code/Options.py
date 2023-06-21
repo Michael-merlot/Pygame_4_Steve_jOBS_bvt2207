@@ -37,14 +37,14 @@ class Options:
         self.volume_level = self.game.level_bg_music.get_volume()
 
         #Загрузка изображения кнопки увеличения громкости
-        self.volume_down_image = pygame.image.load('../graphics/image_menu/game.png')
+        self.volume_down_image = pygame.image.load('../graphics/image_menu/plus.png')
         #Загрузка изображения кнопки уменьшения громкости
-        self.volume_up_image = pygame.image.load('../graphics/image_menu/game.png')
+        self.volume_up_image = pygame.image.load('../graphics/image_menu/minus.png')
 
         # Определение кнопок
         self.back_image = pygame.image.load('../graphics/image_menu/game.png')
-        self.fullscreen_image = pygame.image.load('../graphics/image_menu/game.png')
-        self.windowed_image = pygame.image.load('../graphics/image_menu/game.png')
+        self.fullscreen_image = pygame.image.load('../graphics/image_menu/fullscreen.png')
+        self.windowed_image = pygame.image.load('../graphics/image_menu/window.png')
 
         self.options_buttons = [
             {"image": self.fullscreen_image, "pos": (screen_width // 2 - 300, screen_height // 2 - 120),
@@ -60,19 +60,19 @@ class Options:
         ]
 
     def volume_up(self):
-        # Увеличиваем громкость на 10%
-        self.volume_level = min(1.0, self.volume_level + 0.1)
+        # Увеньшаем громкость на 10%
+        self.volume_level = min(1.0, self.volume_level - 0.1)
         self.game.level_bg_music.set_volume(self.volume_level)
         self.game.overworld_bg_music.set_volume(self.volume_level)
-        self.game.menu_bg_music.set_volume(self.volume_level)  # Добавьте эту строку
+        self.game.menu_bg_music.set_volume(self.volume_level)
         print(f"Volume up, new volume level is: {self.volume_level}")
 
     def volume_down(self):
-        # Уменьшаем громкость на 10%
-        self.volume_level = max(0.0, self.volume_level - 0.1)
+        # Увеличиваем громкость на 10%
+        self.volume_level = max(0.0, self.volume_level + 0.1)
         self.game.level_bg_music.set_volume(self.volume_level)
         self.game.overworld_bg_music.set_volume(self.volume_level)
-        self.game.menu_bg_music.set_volume(self.volume_level)  # Добавьте эту строку
+        self.game.menu_bg_music.set_volume(self.volume_level)
         print(f"Volume down, new volume level is: {self.volume_level}")
 
     def check_events(self):
@@ -103,7 +103,7 @@ class Options:
         # Отобразить все кнопки
         for i, button in enumerate(self.buttons):
             if i == self.selected_button:
-                color = (255, 0, 0)  # Красный цвет для выбранной кнопки
+                color = (255, 0, 0)
             else:
-                color = (255, 255, 255)  # Белый цвет для всех остальных кнопок
+                color = (255, 255, 255)
             self.display_surface.blit(button["image"], button["pos"])

@@ -237,9 +237,9 @@ class Level:
 
         if enemy_collisions:
             for enemy in enemy_collisions:
-                enemy_center = enemy.rect.centery # Центр
-                enemy_top = enemy.rect.top # Сверху
-                player_bottom = self.player.sprite.rect.bottom # Расстояние
+                enemy_center = enemy.rect.centery
+                enemy_top = enemy.rect.top
+                player_bottom = self.player.sprite.rect.bottom
                 if enemy_top < player_bottom < enemy_center and self.player.sprite.direction.y >= 0:
                     self.stomp_sound.play()
                     self.player.sprite.direction.y = -15

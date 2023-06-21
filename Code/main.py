@@ -13,7 +13,7 @@ class Game:
         self.screen = screen
 
         # Игровые атрибуты
-        self.max_level = 4
+        self.max_level = 0
         self.max_health = 100
         self.current_health = 100
         self.coins = 0
@@ -23,6 +23,7 @@ class Game:
         self.overworld_bg_music = pygame.mixer.Sound('../audio/overworld_music.mp3')
         self.menu_bg_music = pygame.mixer.Sound('../audio/menu_music.mp3')
 
+        # Настройка туториала
         self.game_menu = Gamemenu(0, self.screen, self)
         self.tutorial_shown = False
         self.tutorial = None
@@ -35,7 +36,7 @@ class Game:
 
         # Создание мира
         self.overworld = Overworld(0, self.max_level, screen, self.create_level)
-        self.status = 'menu'  # начинаем с меню
+        self.status = 'menu'
         self.game_menu = Gamemenu(0, screen, self)
         self.overworld_bg_music.play(loops=-1)
 

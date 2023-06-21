@@ -13,10 +13,10 @@ class Gamemenu:
         self.options = Options(screen, self, game)
 
         self.background_image = pygame.image.load('../graphics/image_menu/menu.png')
-        self.levels_image = pygame.image.load('../graphics/image_menu/game.png')
-        self.settings_image = pygame.image.load('../graphics/image_menu/game.png')
-        self.exit_image = pygame.image.load('../graphics/image_menu/game.png')
-        self.toggle_fullscreen_image = pygame.image.load('../graphics/image_menu/game.png')
+        self.levels_image = pygame.image.load('../graphics/image_menu/play.png')
+        self.settings_image = pygame.image.load('../graphics/image_menu/options.png')
+        self.exit_image = pygame.image.load('../graphics/image_menu/exit.png')
+        self.toggle_fullscreen_image = pygame.image.load('../graphics/image_menu/fullscreen.png')
         self.back_image = pygame.image.load('../graphics/image_menu/game.png')
 
         self.main_menu_buttons = [

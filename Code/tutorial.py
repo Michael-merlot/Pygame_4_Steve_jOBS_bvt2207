@@ -21,7 +21,7 @@ class Tutorial:
 
         if pygame.time.get_ticks() - self.start_time >= 4000:
             self.current_text += 1
-            self.start_time = pygame.time.get_ticks()  # обновляем время начала показа следующего сообщения
+            self.start_time = pygame.time.get_ticks()
 
     def next(self):
         if self.current_text < len(self.texts) - 1:
