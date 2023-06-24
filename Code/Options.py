@@ -60,7 +60,7 @@ class Options:
         ]
 
     def volume_up(self):
-        # Увеньшаем громкость на 10%
+        # Уменьшаем громкость на 10%
         self.volume_level = min(1.0, self.volume_level - 0.1)
         self.game.level_bg_music.set_volume(self.volume_level)
         self.game.overworld_bg_music.set_volume(self.volume_level)
