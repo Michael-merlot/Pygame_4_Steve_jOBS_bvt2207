@@ -1,7 +1,8 @@
 import pygame
 class Tutorial:
-    def __init__(self, screen):
+    def __init__(self, screen, game):
         self.screen = screen
+        self.game = game
         self.font = pygame.font.Font('../font/Sans.ttf', 30)
         self.texts = [
             "Добро пожаловать в обучение!",

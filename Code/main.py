@@ -1,4 +1,5 @@
 import pygame, sys
+import random
 from settings import *
 from level import Level
 from overworld import Overworld
@@ -7,13 +8,14 @@ from Gamemenu import Gamemenu
 from Options import Options
 from tutorial import Tutorial
 from game_data import level_dialogs
+from raindrops import Raindrop
 
 class Game:
     def __init__(self, screen):
         self.screen = screen
 
         # Игровые атрибуты
-        self.max_level = 0
+        self.max_level = 5
         self.max_health = 100
         self.current_health = 100
         self.coins = 0
@@ -34,6 +36,14 @@ class Game:
         self.overworld_bg_music.set_volume(self.volume_level)
         self.options = Options(self.screen, self.game_menu, self)
 
+        # Дождь
+        self.raindrops = pygame.sprite.Group()
+        for _ in range(100):
+            x = random.randint(0, screen_width)
+            y = random.randint(-screen_height, 0)
+            raindrop = Raindrop(x, y)
+            self.raindrops.add(raindrop)
+
         # Создание мира
         self.overworld = Overworld(0, self.max_level, screen, self.create_level)
         self.status = 'menu'
@@ -53,7 +63,7 @@ class Game:
         self.level_bg_music.play(loops=-1)
 
         if not self.tutorial_shown:
-            self.tutorial = Tutorial(self.screen)
+            self.tutorial = Tutorial(self.screen, self)
             self.tutorial_shown = True
         else:
             self.tutorial = None
@@ -65,6 +75,7 @@ class Game:
         self.status = 'overworld'
         self.overworld_bg_music.play(loops=-1)
         self.level_bg_music.stop()
+        self.tutorial = None
 
     def change_coins(self, amount):
         self.coins += amount
@@ -148,6 +159,10 @@ while True:
     if game.tutorial is not None:
         game.tutorial.handle_event(event)
         game.tutorial.draw()
+
+    if game.status == 'level':
+        game.raindrops.update()
+        game.raindrops.draw(game.screen)
 
     pygame.display.update()
     clock.tick(60)
