@@ -12,7 +12,7 @@ class Gamemenu:
         self.game = game
         self.options = Options(screen, self, game)
 
-        self.background_image = pygame.image.load('../graphics/image_menu/menu.png')
+        self.background_image = pygame.image.load('../graphics/image_menu/menu.jpg')
         self.levels_image = pygame.image.load('../graphics/image_menu/play.png')
         self.settings_image = pygame.image.load('../graphics/image_menu/options.png')
         self.exit_image = pygame.image.load('../graphics/image_menu/exit.png')
